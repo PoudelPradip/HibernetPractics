@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.hibernate.xmlConfiguration.model.Student" table="Student">
+        <!--primary key Columns of a Table-->
+        <id name="id" type="int" column="stud_id">
+            <generator class="native"/>
+        </id>
+        <!--Normal Columns of a Table-->
+        <property name="firstName" column="first_name" type="java.lang.String"/>
+        <property name="lastName" column="last_name" type="java.lang.String"/>
+    </class>
+</hibernate-mapping>

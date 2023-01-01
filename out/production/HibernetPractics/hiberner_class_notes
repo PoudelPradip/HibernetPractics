@@ -1,0 +1,70 @@
+Hibernate:
+
+jdbc:
+-----
+student_info
+id(int(20))  name(varchar(20)) roll (int(30))
+
+select * from table
+
+getInt/getString/getInt
+
+class Student {
+
+private int id;
+private String name;
+private int roll;
+
+getter & setter
+
+}
+
+ORM -> Object Relational Mapping
+JPA -> Java Perdsistance api --> javax.persistance
+
+Hibernate is a framework which helps to interact database from java. Open source tool.
+It implements JPA.
+
+Advantage:
+
+1. performance is very high
+2. Automatic table creation
+3. Complex joins can be managed very easily.
+
+Hibernate Architecture:
+
+1. java application
+2. Hibernate framework
+3. Backend api
+4. database
+
+Elemnets of Hibernate:
+
+1. SessionFactory
+2. TransactionFactory
+3. Session
+4. Transaction
+5. Connection Provider
+
+Hibernate we will explore in 2 ways:
+
+1. XML configuration
+
+Mapping file should be naming as student.hbm.xml --> to identify the mapping file we need to provide .hbm
+1. class -> help to define specific mapping from java classes to the database tables.
+2. id -> unique id attribute (primary key)
+3. generator -> generate primary key value automatically. when we set it to native it will automatically pick Identity, sequence.
+4. Property -> other column details mapped with the object.
+   1, 2, 3,4 ,5,6
+
+** An Entity is a class Object for Java equivalent to Table in SQL.
+** SessionFactory always create only once, where as we can create multiple session.
+** To perform fetch/load data operation we need default constructor of an entity.
+
+CRUD Operation
+C -> Create as new table & insert new records.
+R -> Read / fetch Records
+U -> Update Records
+D -> Delete Records
+
+2. Annotation

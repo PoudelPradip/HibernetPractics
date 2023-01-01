@@ -1,0 +1,3 @@
+com\hibernate\annotation\model\Student.class
+com\hibernate\annotation\model\Department.class
+com\hibernate\annotation\execution\ExecutionXmlConfigurationBasedHibernate.class

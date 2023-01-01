@@ -1,0 +1,37 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Connection Pool setting .. build it test pool-->
+        <property name="connection.pool_size">1</property>
+
+        <!-- Set Url: (jdbc:{database type (MYSQL/Oracle)}://database url:port/schema_name)-->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/student_hibernet_xml_pratics</property>
+
+        <!--Set User Name to connect to the database-->
+        <property name="hibernate.connection.username">root</property>
+
+        <!--Set password to connect to the database-->
+        <property name="hibernate.connection.password">Java@2022</property>
+
+        <!--Set Driver class name to connect to the database-->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+
+        <!-- Dialect helps us to convert HQL(ORM based) to SQL-->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!--All the executed scripts will be visible at console-->
+        <property name="show_sql">true</property>
+
+        <!--Create : every time it will drop the table and re-create, Update : not to re-create on every server start up-->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!--Set the current Session Context-->
+        <property name="current_session_context_class">thread</property>
+
+
+        <mapping resource="xmlConfiguration/student.hbm.xml"/>
+        <mapping resource="xmlConfiguration/department.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
